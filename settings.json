@@ -58,11 +58,12 @@
             "font": {
                 "face": "MesloLGL Nerd Font",
                 "size": 10
-            }
+            },
+            "startingDirectory": "%USERPROFILE%"
         },
         "list": [
             {
-                "backgroundImage": "%USERPROFILE%\\Imagens\\background\\windows.png",
+                "backgroundImage": "%USERPROFILE%\\Pictures\\backgrounds\\windows.png",
                 "backgroundImageOpacity": 0.8,
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
@@ -76,6 +77,32 @@
                 "name": "Prompt de comando"
             },
             {
+                "icon": "%USERPROFILE%\\Pictures\\icons\\debian.png",
+                "backgroundImage": "%USERPROFILE%\\Pictures\\backgrounds\\debian.jpg",
+                "backgroundImageOpacity": 0.3,
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "WSL: Debian",
+                "commandline": "wsl.exe -d Debian",
+                "startingDirectory": "~"
+            },
+            {
+                "icon": "%USERPROFILE%\\Pictures\\icons\\ubuntu.png",
+                "backgroundImage": "%USERPROFILE%\\Pictures\\backgrounds\\ubuntu.jpg",
+                "backgroundImageOpacity": 0.3,
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "WSL: Ubuntu",
+                "commandline": "wsl.exe -d Ubuntu",
+                "startingDirectory": "~"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": true,
                 "name": "Windows PowerShell"
@@ -85,14 +112,6 @@
                 "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "backgroundImage": "%USERPROFILE%\\Imagens\\background\\ubuntu.jpg",
-                "backgroundImageOpacity": 0.3,
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
-                "hidden": false,
-                "name": "WSL: Ubuntu",
-                "source": "Windows.Terminal.Wsl"
             },
             {
                 "guid": "{06c51c11-dd3e-5cc5-9d63-0d4709dc1c71}",
@@ -105,20 +124,6 @@
                 "hidden": true,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "backgroundImage": "%USERPROFILE%\\Imagens\\background\\debian.jpg",
-                "backgroundImageOpacity": 0.3,
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-                "hidden": false,
-                "name": "WSL: Debian",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
             }
         ]
     },

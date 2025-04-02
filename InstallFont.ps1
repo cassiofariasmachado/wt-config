@@ -31,7 +31,7 @@ $systemFontsPath = "${env:SystemRoot}\Fonts"
 Write-Host "🌏 baixando fonte de ""$fontUrl"""
 
 if (Test-Path $tempPath) {
-    Write-Host "🧹 Limpando arquivos temporários"
+    Write-Host "🧹 limpando arquivos temporários"
     Remove-Item -Recurse -Force $tempPath
 }
 
