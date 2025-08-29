@@ -1,21 +1,35 @@
-# 👩‍💻 Configuração do Windows Terminal
+# 👩‍💻 Windows Terminal Configuration
 
-Este repositório contém a configuração que normalmente uso no Windows Terminal.
+This repository contains the configuration I usually use for Windows Terminal.
 
-## Instalação
+## Installation
 
-Para instalar, execute:
+To install:
 
-```powershell
-# Clonar repo com os submodulos do git
-git clone --recursive https://github.com/cassiofariasmachado/posh-config.git
+1. Clone repo with `git submodules`:
 
-# Acessar a pasta do repo
-cd posh-config
+    ```powershell
+    git clone --recursive https://github.com/cassiofariasmachado/posh-config.git
+    ```
 
-# Executar instalação de font de sua preferência, estou utilizando a MesloLGL Nerd Font
-.\InstallFont.ps1 -fontPatch Meslo
+2. Enter the repo folder:
 
-# Executar instalação do Windows Terminal
-.\Install.ps1
-```
+    ```powershell
+    cd posh-config
+    ```
+
+3. Install the font of your choice (I use `MesloLGL Nerd Font`):
+
+    ```powershell
+    .\InstallFont.ps1 -fontPatch Meslo
+    ```
+
+4. Install Windows Terminal:
+
+    ```powershell
+    .\Install.ps1
+    ```
+
+## References
+
+- [Install and get started setting up Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/install)

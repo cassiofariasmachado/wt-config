@@ -2,13 +2,13 @@
 
 <#
 .SYNOPSIS
-    Script utilitário de instalação de Nerd Fonts.
+    Utility script for installing Nerd Fonts.
 
 .DESCRIPTION
-    Script de instalação de Nerd Fonts (https://github.com/ryanoasis/nerd-fonts).
+    Script to install Nerd Fonts (https://github.com/ryanoasis/nerd-fonts).
 
 .PARAMETER fontPatch
-    Nome do patch/fonte que deve ser instalado. Exemplo: Meslo ou CascadiaCode.
+    Name of the patch/font to be installed. Example: Meslo or CascadiaCode.
 
 .EXAMPLE
     .\InstallFont.ps1 -fontPatch Meslo
@@ -28,17 +28,17 @@ $tempFontsPath = "$tempPath/$fontPatch.zip"
 
 $systemFontsPath = "${env:SystemRoot}\Fonts"
 
-Write-Host "🌏 baixando fonte de ""$fontUrl"""
+Write-Host "🌏 downloading font from ""$fontUrl"""
 
 if (Test-Path $tempPath) {
-    Write-Host "🧹 limpando arquivos temporários"
+    Write-Host "🧹 cleaning up temporary files"
     Remove-Item -Recurse -Force $tempPath
 }
 
 New-Item -Path $extractedFontsFolder -ItemType Directory -Force | Out-Null 
 Invoke-WebRequest -Uri $fontUrl -OutFile $tempFontsPath
 
-Write-Host "🗂️ extraindo fontes em ""$extractedFontsFolder"""
+Write-Host "🗂️ extracting fonts to ""$extractedFontsFolder"""
 
 Expand-Archive -Path $tempFontsPath `
     -DestinationPath $extractedFontsFolder -Force
@@ -50,11 +50,11 @@ foreach ($fontFile in $fontFiles) {
 
     $fontName = $fontFile.BaseName
 
-    Write-Host "✅ registrando fonte ""$fontName"""
+    Write-Host "✅ registering font ""$fontName"""
 
     Set-ItemProperty -Path $regKey -Name $fontName `
         -Value $fontFile.Name
 }
 
-Write-Host "🧹 limpando arquivos temporários"
+Write-Host "🧹 cleaning up temporary files"
 Remove-Item -Recurse -Force $tempPath
